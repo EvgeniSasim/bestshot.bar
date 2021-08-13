@@ -1,0 +1,153 @@
+.characteristics {
+    .container {
+        @include flex-column;
+        text-align: center;
+        align-items:center;
+        justify-content: center;
+        padding-bottom: 54px;
+        padding-top: 100px;
+    }
+    &__title {
+        align-self: flex-start;
+        @include title;
+        @media (max-width: $lg) {
+            align-self: center;
+        }
+        span {
+            font-size: 80px;
+            margin-left: 0;
+            @media (max-width: $lg) {
+                display: none;
+            }
+        }
+        hr {
+            margin-top: -26px;
+            width: calc(100vw - 35vw);
+            @media (max-width: $lg) {
+                padding: 5px;
+                margin-top: 0px;
+                width: calc(100vw - 90vw);
+            }
+            @media (max-width: $sm) {
+                padding: 1px;
+                width: calc(100vw - 80vw);
+            }
+        }
+    }
+    &__contents {
+        @include flex-row;
+        padding: 80px 0 40px 0;
+        @media (max-width: $lg) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $sm) {
+            justify-content: space-around;
+        }
+        &__column {
+            @include flex-column;
+            width: 25%;
+            @media (max-width: $lg) {
+                padding-bottom: 50px;
+            }
+            @media (max-width: $xl) {
+                width: 50%;
+            }
+            @media (max-width: $sm) {
+                width: 90%;
+            }
+            align-items:center;
+            justify-content: center;
+            &__title {
+                text-transform: uppercase;
+                font-family: $FontRegularRusso;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 26px;
+                color: $black;
+                margin: 31px 0 34px 0;
+                box-sizing: border-box;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: 100% 2px;
+                background-image: linear-gradient(to right, #f396394f 40%, #f39639 40%, #f39639 60%, #f396394f 60%);
+            }
+            &__descr {
+                font-family: $FontRegular;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                color: $black;
+                padding-bottom: 34px;
+                min-height: 100px;
+                @media (max-width: $lg) {
+                    width: 60%;
+                }
+                @media (max-width: $lg) {
+                    width: 70%;
+                }
+                @media (max-width: $xs) {
+                    width: 100%;
+                }
+            }
+            &__check {
+                @media (max-width: $sm) {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    .payback__title {
+        font-family: $FontRegularRusso;
+        color: $black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 26px;
+        padding-bottom: 34px;
+        padding-top: 45px;
+        text-transform: uppercase;
+        @media (max-width: $lg) {
+            padding-top: 0px;
+        }
+    }
+    .payback__descr {
+        font-family: $FontRegular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: $black;
+        padding-bottom: 34px;
+        width: 50%;
+        @media (max-width: $sm) {
+            width: 100%;
+        }
+    }
+    .payback__table {
+        display: block;
+        overflow-x: auto;
+        padding-bottom: 34px;
+        @media (max-width: $md) {
+            width: 100%;
+            overflow-x: auto;
+            th {
+                min-width: 200px;
+            }
+        }
+    }
+    .payback__table table tr th {
+        font-family: $FontRegular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: $black;
+        border: solid 1px $grey;
+        padding: 20px;
+        max-width: 200px;
+    }
+
+
+}

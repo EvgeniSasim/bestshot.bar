@@ -1,0 +1,11 @@
+.contact-us__forms.form-popup#myForm 
+            form(action="")
+                .form__title КУПИТЬ АТТРАКЦИОН
+                .form__img
+                    img(src="../img/arrow.png", alt="Arrow", loading="lazy")
+                .input__title ИМЯ
+                input(type="type", placeholder="Как Вас зовут?", required)
+                .input__title ТЕЛЕФОН
+                input(type="type", placeholder="Ваш номер телефона", required)
+                button.btn-myprimary Купить
+                button.btn-myprimary.close(onclick="closeForm()") X

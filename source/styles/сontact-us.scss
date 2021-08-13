@@ -1,0 +1,113 @@
+.contact-us {
+    background-image: url(../img/contacts_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+        .container {
+            @include flex-column;
+        }
+        &__title {
+            font-family: $FontRegularRusso;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 21px;
+            line-height: 36px;
+            color: $orange;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            span {
+                color: $white;
+            }
+        }
+        &__descr {
+            font-family: $FontLight;
+            color: $white;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 19px;
+            line-height: 20px;
+            width: 50%;
+            padding-bottom: 36px;
+            @media (max-width: $sm) {
+                width: 99%;
+            }
+        }
+        &__forms {
+            @include flex-row;
+            padding-bottom: 150px;
+            @media (max-width: $sm) {
+                @include flex-column;
+                align-items: center;
+                justify-content: space-around;
+                padding-bottom: 50px;
+            }
+            form {
+                @include flex-column;
+                align-items: center;
+                background: rgba(231, 231, 231, 0.2);
+                border-radius: 10px;
+                padding: 5px;
+                max-width: 255px;
+                text-align: center;
+                .form__title {
+                    font-family: $FontRegularRusso;
+                    color: $white;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 26px;
+                    padding: 16px 20px 11px 20px;
+                    &.second_form {
+                        padding: 16px 8px 11px 8px;
+                    }
+                }
+                .input__title {
+                    align-self: flex-start;
+                    padding-left: 33px;
+                    padding-top: 22px;
+                    font-family: $FontBold;
+                    color: $orange;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+                button.btn-myprimary {
+                    font-family: $FontBoldCond;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 26px;
+                    margin-bottom: 27px;
+                    margin-top: 37px;
+                    min-width: 191px;
+                }
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: 0;
+                    border-bottom: solid 1px $orange;
+                    width: 180px;
+                    color:$white;
+                }
+                input::placeholder {
+                    color:$white;
+                }
+                
+            }
+            form:nth-child(1) {
+                margin-right: 53px;
+                @media (max-width: $sm) {
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                }
+             }
+             &.eng {
+                 form {
+                    .input__title {
+                        padding-left: 16px;
+                     }
+                 }
+             }
+        }
+}

@@ -1,0 +1,38 @@
+header#head 
+    .container
+        .navbar
+            nav.header__menu
+                ul.header__menu__desk__list
+                            li
+                              a(href="#char") Characteristics
+                            li
+                              a(href="#price") Price 
+                            li
+                              a(href="#faq") FAQ 
+            include ./mobail-menu.pug                
+            .header-logo
+                a(href="#head") 
+                    img(src="../img/logo.png", alt="Logo") 
+            .header__widgets 
+                .call__btn
+                    a(href="tel:+35699948436")
+                        img(src="../img/phone.svg", alt="Phone")
+                .leng__btn
+                    a(href="index_ru.html") 
+                        img(src="../img/btn_leng_ru.png", alt="Ru")
+                    a(href="")     
+                        img(src="../img/btn_leng_eng.png", alt="Eng", onclick="eng()")
+        .home__contents
+            .home__contents__offer 
+                .subtitle Ready made amusement, so one can start making profit from day 1.
+                h1
+                    span “Shooting bar”
+                    |  -<br> Equipment for successful business
+                .descr Interactive entertainment that attracts customers to your bar
+                .btn-home
+                    button.btn-myprimary.open-button(onclick="openForm()") Make an order
+            .home__contents__img 
+                img(src="../img/wanted_home_mob.png", alt="Wanted")
+                .item__top Business minded person who wants to boost profit
+                .item__bottom Thanks to
+

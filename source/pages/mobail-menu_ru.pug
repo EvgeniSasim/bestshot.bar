@@ -1,0 +1,9 @@
+nav.mobile-menu
+    input.mobile-menu__checkbox#checkbox(type="checkbox")
+    label.mobile-menu__btn(for='checkbox')
+        .mobile-menu__icon
+    .mobile-menu__container
+        ul.mobile-menu__list
+            each name, key in {char: 'Характеристики', price: 'Прайс', faq: 'FAQ'}
+                li.mobile-menu__item
+                    a.mobile-menu__link(href= "#" + key)= name

@@ -1,0 +1,36 @@
+.btn-home {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-image: url(../img/btn_bg_home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    border: 0px solid #000000;
+    border-radius: 10px;
+    width: 285px;
+    align-self: center;
+    margin-bottom: 30px;
+    button.btn-myprimary {
+        min-width: 260px;
+    }
+    :hover {
+        background-color: $lightbroun;
+    }
+}
+button.btn-myprimary {
+    font-family: $FontBoldCond;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color:$white;
+    padding: 7px 49px 11px 49px;
+    background-color: $orangeDark;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 8px 12px;
+}
+button.btn-myprimary.eng {
+    padding: 7px 20px 11px;
+}

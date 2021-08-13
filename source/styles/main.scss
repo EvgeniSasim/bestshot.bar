@@ -1,0 +1,110 @@
+@import "fonts";
+@import "const";
+@import "mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    @media (max-width: $xl) {
+        width: 85%;
+    }
+    @media (max-width: $lg) {
+        width: 87%;
+    }
+    @media (max-width: $md) {
+        width: 90%;
+    }
+    @media (max-width: $sm) {
+        width: 93%;
+    }
+    @media (max-width: $xs) {
+        width: 99%;
+    }
+}
+
+@import "button";
+@import "header";
+@import "mobail-menu";
+@import "advantages.scss";
+@import "characteristics.scss";
+@import "slider.scss";
+@import "price.scss";
+@import "about.scss";
+@import "faq.scss";
+@import "сontact-us.scss";
+@import "map.scss";
+@import "footer.scss";
+
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 30%;
+    right: 35%;
+    z-index: 9;
+    @media (max-width: $sm) {
+        bottom: 20%;
+        right: 15%;
+    }
+  }
+  .contact-us__forms.form-popup form {
+    background: rgb(105, 105, 105);
+    position: relative;
+  }
+  .contact-us__forms.form-popup {
+      margin: 0;
+      padding: 0;
+  }
+  .contact-us__forms.form-popup button.close {
+    position: absolute;
+    top: -50px;
+    right: -26px;
+    min-width: 35px;
+    padding: 4px;
+    border-radius: 100%;
+}
+.loaderArea {  
+  .loader {
+      height: 40px;
+      width: 40px;
+      z-index: 999;
+      position: absolute;
+      left: 50%;
+      margin-left: -20px;
+      top: 50%;
+      margin-top: -20px;
+      &:before,
+      &:after {
+        content: "";
+        height: 40px;
+        width: 40px;
+        border: 8px solid $brown;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+      }
+      
+      &:before {
+        animation: animate 2s infinite linear;
+      }
+      
+      &:after {
+        animation: animate2 2s infinite linear;
+      }
+    }
+    
+    @keyframes animate {
+      100% {
+        transform: rotate(180deg) skew(360deg);
+      }
+    }
+    
+    @keyframes animate2 {
+      100% {
+        transform: rotate(-180deg) skew(-360deg);
+      }
+    }
+  }

@@ -1,0 +1,19 @@
+.map {
+    background-image: url(../img/map_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 80vh;
+    @media (max-width: $sm) {
+        height: 50vh;
+    }
+    .locations {
+        display: block;
+        position: relative;
+        .location-item {
+            position:absolute;
+            top: 60px;
+            right: 44%;
+        }
+    }
+}

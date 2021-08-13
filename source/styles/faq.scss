@@ -1,0 +1,89 @@
+.faq {
+    margin: 35px 0;
+    @include flex-row;
+    &__picture {
+        @media (max-width: $md) {
+            display: none;
+        }
+    }
+    &__contents {
+        flex: 1;
+        margin-left: 40px;
+        @media (max-width: $sm) {
+            margin-left: 0px;
+        }
+        &__title {
+            @include title;
+            hr {
+                margin-top: -37px;
+                margin-left: 16%;
+                width: 83%;
+                @media (max-width: $lg) {
+                    margin-top: -12px;
+                }
+                @media (max-width: $sm) {
+                    margin-top: 0;
+                    margin-left: 33%;
+                    width: calc(100vw - 80vw);
+                }
+            }
+        }
+        &__questions {
+            @include flex-row;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-top: 20px;
+            width: 80%;
+            @media (max-width: $xxl) {
+                width: 90%;
+            }
+            @media (max-width: $xl) {
+                width: 100%;
+            }
+            @media (max-width: $xs) {
+                @include flex-column;
+            }
+            &__column {
+                @include flex-column;
+                flex:1;
+                margin: 0 30px;
+                @media (max-width: $xl) {
+                    margin: 0 20px;
+                }
+                @media (max-width: $lg) {
+                    margin: 0 10px;
+                }
+                .question {
+                    @include flex-column;
+                    padding: 40px 0;
+                    @media (max-width: $xl) {
+                        padding: 35px 0;
+                    }
+                    @media (max-width: $lg) {
+                        padding: 25px 0;
+                    }
+                    .title-question {
+                        font-family: $FontRegularRusso;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: $black;
+                        margin-bottom: 16px;
+                        padding-left: 10px;
+                        border-left: solid 2px $orange;
+                    }
+                    .content-question {
+                        font-family: $FontRegular;
+                        color: $black;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+}

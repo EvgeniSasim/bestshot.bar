@@ -1,0 +1,40 @@
+header#head 
+    .container
+        .navbar
+            nav.header__menu
+                ul.header__menu__desk__list
+                            li
+                              a(href="#char") Характеристики
+                            li
+                              a(href="#price") Прайс 
+                            li
+                              a(href="#faq") FAQ 
+            include ./mobail-menu_ru.pug                
+            .header-logo
+                a(href="#head") 
+                    img(src="../img/logo.png", alt="Logo") 
+            .header__widgets 
+                .call__btn
+                    a(href="tel:+35699948436")
+                        img(src="../img/phone.svg", alt="Phone")
+                .leng__btn
+                    a(href="") 
+                        img(src="../img/btn_leng_ru.png", alt="Ru")
+                    a(href="https://bestshot.bar/")     
+                        img(src="../img/btn_leng_eng.png", alt="Eng")
+        .home__contents
+            .home__contents__offer 
+                .subtitle Оборудование для быстрого старта бизнеса
+                h1
+                    span “ТИР-БАР”
+                    | -<br> УНИКАЛЬНЫЙ ГЕНЕРАТОР ВАШЕГО ДОХОДА
+                .descr Аттракцион-реклама для любого профильного заведения
+                .btn-home
+                    button.btn-myprimary.open-button(onclick="openForm()") Оставить заявку
+            .home__contents__img 
+                img(src="../img/wanted_home_mob.png", alt="Wanted")
+                .item__top человек, который хочет получать доход
+                .item__bottom благодаря
+
+
+

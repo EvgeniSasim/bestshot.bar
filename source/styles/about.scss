@@ -1,0 +1,53 @@
+.about {
+    background-image: url(../img/about_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    .container {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 36px;
+        @media (max-width: $sm) {
+            @include flex-column;
+        }
+    }
+    &__picture {
+        margin-top: 110px;
+        margin-bottom: 172px;
+        @media (max-width: $sm) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 0;
+            img {
+                width: 90%;
+            }
+        }
+    }
+    &__multimax,
+    &__bestPrice {
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        width: 30%;
+        @media (max-width: $sm) {
+            width: 100%;
+            align-self: center;
+            order: 2;
+        }
+        &__descr {
+            font-family: $FontRegularRusso;
+            color: $white;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 20px;
+            text-align: center;
+            min-height: 140px;
+        }
+    }
+}
